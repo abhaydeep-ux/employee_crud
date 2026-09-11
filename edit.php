@@ -62,7 +62,7 @@ while ($row = $employees->fetch_assoc()) {
 
 <head>
 
-    <title>Employee Main Page</title>
+    <title>Employee Feature Page</title>
 
     <link rel="stylesheet" href="css/edit.css">
 
