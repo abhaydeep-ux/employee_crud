@@ -1,0 +1,200 @@
+/* ==============================
+   CREATE EMPLOYEE PAGE
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #1e293b;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ==============================
+   FORM HEADING
+============================== */
+
+h2 {
+    position: absolute;
+
+    top: 70px;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 30px;
+
+    color: #0f172a;
+}
+
+
+/* ==============================
+   FORM
+============================== */
+
+form {
+    width: 100%;
+    max-width: 600px;
+
+    background: #ffffff;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    border: 1px solid #e2e8f0;
+
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+
+/* ==============================
+   LABEL
+============================== */
+
+label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #334155;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* ==============================
+   INPUT
+============================== */
+
+input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #1e293b;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: all 0.2s ease;
+}
+
+
+/* ==============================
+   INPUT FOCUS
+============================== */
+
+input:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+
+/* ==============================
+   PLACEHOLDER
+============================== */
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+
+/* ==============================
+   BUTTON
+============================== */
+
+button {
+    width: 100%;
+
+    padding: 13px 20px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+
+/* ==============================
+   BUTTON HOVER
+============================== */
+
+button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(37, 99, 235, 0.20);
+}
+
+
+/* ==============================
+   BUTTON CLICK
+============================== */
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 20px;
+    }
+
+    h2 {
+        position: static;
+
+        margin-bottom: 25px;
+
+        font-size: 25px;
+    }
+
+    form {
+        padding: 25px;
+
+        max-width: 100%;
+    }
+}
