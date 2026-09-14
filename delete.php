@@ -15,5 +15,5 @@ if ($result) {
     header("Location: index.php");
     exit;
 } else {
-    echo "Employee delete failed";
+    echo "Employee  failed";
 }
