@@ -105,7 +105,7 @@ class Crud {
 
 }
 
-# Generic Restore
+// testing SourceTree
 public function restore($table, $id) {
 
     $query = "UPDATE $table
