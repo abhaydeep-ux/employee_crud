@@ -43,7 +43,8 @@ class Crud {
     }
 
     public function select($table){
-        $query = "SELECT * FROM $table";
+        $query = "SELECT * FROM $table
+        WHERE deleted_at IS NULL";
         $statement = $this->database->prepare($query);
         $statement->execute();
         $result = $statement->get_result();
