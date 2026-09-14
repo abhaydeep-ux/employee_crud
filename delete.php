@@ -1,3 +1,4 @@
+
 <?php
 
 require_once "config/database.php";
@@ -7,13 +8,27 @@ $database = new Database();
 
 $crud = new Crud($database);
 
-$id = $_GET["id"];
+if (isset($_GET["id"])) {
 
-$result = $crud->delete( "employees", $id);
+    $id = $_GET["id"];
 
-if ($result) {
-    header("Location: index.php");
-    exit;
+    $result = $crud->delete("employees", $id);
+
+    if ($result) {
+
+        header("Location: index.php");
+
+        exit;
+
+    } else {
+
+        echo "Employee failed";
+
+    }
+
 } else {
-    echo "Employee  failed";
+
+    echo "Employee ID not found";
+
 }
+

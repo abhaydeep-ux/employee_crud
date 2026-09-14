@@ -90,12 +90,35 @@ class Crud {
    }
 
    
-    public function delete($table, $id){
-        $query = "DELETE FROM $table WHERE id = ?";
-        $statement = $this->database->prepare($query);
-        $statement->bind_param("i", $id);
-        return $statement->execute();
-    }
+    public function delete($table, $id) {
+
+    $query = "UPDATE $table
+              SET deleted_at = NOW()
+              WHERE id = ?";
+
+    $statement = $this->database->prepare($query);
+
+    $statement->bind_param("i", $id);
+
+    return $statement->execute();
+
+}
+
+# Generic Restore
+public function restore($table, $id) {
+
+    $query = "UPDATE $table
+              SET deleted_at = NULL
+              WHERE id = ?";
+
+    $statement = $this->database->prepare($query);
+
+    $statement->bind_param("i", $id);
+
+    return $statement->execute();
+
+}
+
 
 }
 
