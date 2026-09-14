@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Employee insert failed";
     }
 }
-
+#employee 
 ?>
 
 <!DOCTYPE html>
